@@ -54,14 +54,14 @@ const LoaderAnimation = () => {
     const grid = getGridLayout(loaders, columns);
 
     return (
-        <div className="min-h-screen bg-gray-950 p-4">
+        <div className="min-h-screen bg-gray-950 px-40">
             <div className="container mx-auto">
-                <h1 className="text-3xl font-bold text-white mb-8 text-center">Loading Animations</h1>
+                <h1 className="text-3xl font-bold text-white mb-8 text-center py-12">Loading Animations</h1>
 
                 {/* Dynamically adjust grid columns using Tailwind */}
-                <div className={`grid gap-4 ${columns === 1 ? 'grid-cols-1' : columns === 2 ? 'grid-cols-2' : columns === 3 ? 'grid-cols-3' : 'grid-cols-4'}`}>
+                <div className={`grid gap-8 ${columns === 1 ? 'grid-cols-1' : columns === 2 ? 'grid-cols-2' : columns === 3 ? 'grid-cols-3' : 'grid-cols-4'}`}>
                     {grid.map((column, columnIndex) => (
-                        <div key={columnIndex} className="flex flex-col gap-4">
+                        <div key={columnIndex} className="flex flex-col gap-8">
                             {column.map(loader => (
                                 <LoaderTile key={loader.id} loader={loader} onClick={openPopup} />
                             ))}
