@@ -30,7 +30,7 @@ export const initialLoaders = [
     id: 2,
     name: "Bounce balls",
     preview: (
-        <div class="flex justify-center items-center h-12">
+      <div class="flex justify-center items-center h-12">
         <div class="w-4 h-4 rounded-full bg-blue-500 mx-1 animate-bounce"></div>
         <div class="w-4 h-4 rounded-full bg-blue-500 mx-1 animate-bounce delay-200"></div>
         <div class="w-4 h-4 rounded-full bg-blue-500 mx-1 animate-bounce delay-400"></div>
@@ -75,11 +75,11 @@ export const initialLoaders = [
     id: 3,
     name: "Fading Circle",
     preview: (
-        <div className="flex justify-center items-center h-12">
+      <div className="flex justify-center items-center h-12">
         <div className="w-4 h-4 rounded-full bg-blue-500 mx-1 animate-fade opacity-0"></div>
         <div className="w-4 h-4 rounded-full bg-blue-500 mx-1 animate-fade opacity-0 delay-200"></div>
         <div className="w-4 h-4 rounded-full bg-blue-500 mx-1 animate-fade opacity-0 delay-400"></div>
-      </div>      
+      </div>
     ),
     html: `<div class="circle-container">
         <div class="circle circle1"></div>
@@ -141,11 +141,11 @@ export const initialLoaders = [
     id: 5,
     name: "Bar",
     preview: (
-      <div className="flex justify-center items-center h-12">
-        <div className="w-2 h-6 bg-blue-500 mx-1 animate-stretch"></div>
-        <div className="w-2 h-6 bg-blue-500 mx-1 animate-stretch delay-400"></div>
-        <div className="w-2 h-6 bg-blue-500 mx-1 animate-stretch delay-800"></div>
-      </div>
+      <div class="flex items-end justify-center h-12 gap-1">
+      <div class="w-1 h-6 bg-blue-500 animate-[bar_1.2s_infinite_alternate]"></div>
+      <div class="w-1 h-6 bg-blue-500 animate-[bar_1.2s_infinite_alternate] [animation-delay:0.4s]"></div>
+      <div class="w-1 h-6 bg-blue-500 animate-[bar_1.2s_infinite_alternate] [animation-delay:0.8s]"></div>
+    </div>
     ),
     html: `<div className="bar-container">
         <div className="bar"></div>
@@ -268,11 +268,13 @@ export const initialLoaders = [
   {
     id: 8,
     name: "CircleLoader ",
-    preview: <div class="w-12 h-12 rounded-full border-3 border-transparent border-t-4 border-t-blue-500 animate-spin">
-    <div class="relative w-full h-full">
-      <div class="absolute top-0 left-0 w-full h-full rounded-full border-3 border-transparent border-t-4 border-t-blue-500 animate-spin"></div>
-    </div>
-  </div>,
+    preview: (
+      <div class="w-12 h-12 rounded-full border-3 border-transparent border-t-4 border-t-blue-500 animate-spin">
+        <div class="relative w-full h-full">
+          <div class="absolute top-0 left-0 w-full h-full rounded-full border-3 border-transparent border-t-4 border-t-blue-500 animate-spin"></div>
+        </div>
+      </div>
+    ),
     html: `<div className="circle-loader">
       <div className="loader-inner">
         <div className="circle-primary"></div>

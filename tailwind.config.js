@@ -6,15 +6,24 @@ module.exports = {
       animation: {
         fade: "fade 0.8s infinite alternate",
         customPulse: "customPulse 1.5s infinite",
-        stretch: "stretch 1.2s infinite alternate",
+        stretch: 'stretch 1.2s infinite alternate',
         "square-spin": "square-spin 2s infinite linear",
         'dot-pulse': 'dot-pulse 1.5s infinite ease-in-out',
         'bounce': 'bounce 0.6s infinite alternate',
+        bar: 'bar 1s ease-in-out infinite alternate',
 
+      },
+      animationDelay: {
+        400: '500ms',
+        800: '1000ms',
       },
       keyframes: {
         'bounce': {
           'to': { transform: 'translateY(-20px)' },
+        },
+        bar: {
+          '0%': { transform: 'scaleY(1)' },
+          '100%': { transform: 'scaleY(0.4)' },
         },
         "square-spin": {
           "0%": { transform: "rotate(0deg)" },
@@ -29,6 +38,9 @@ module.exports = {
         },
         'fade': {
           'to': { opacity: '1' },
+        },
+        stretch: {
+          to: { transform: 'scaleY(0.4)' },
         },
       },
     },

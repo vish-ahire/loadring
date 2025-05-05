@@ -11,7 +11,6 @@ const LoaderAnimation = () => {
     const calculateColumns = useCallback(() => {
         if (typeof window === 'undefined') return;
         const width = window.innerWidth;
-        console.log(width)
         if (width >= 1536) {
             setColumns(4);
         } else if (width >= 1280) {
